@@ -9,14 +9,15 @@ namespace SubarrayRepetitionsNumbers
         {
             Random random = new Random();
             int maximumNumber = 30;
+            int minimumNumber = 1;
             int number;
             int[][] numberArrayNumbers = new int[30][];
             int[] maximumNumberArray;
 
             for (int i = 0; i < numberArrayNumbers.Length; i++)
             {
-                number = random.Next(1, maximumNumber);
-                numberArrayNumbers[i] = new int[random.Next(1, maximumNumber)];
+                number = random.Next(minimumNumber, maximumNumber);
+                numberArrayNumbers[i] = new int[random.Next(minimumNumber, maximumNumber)];
 
                 for (int j = 0; j < numberArrayNumbers[i].Length; j++)
                 {
@@ -27,11 +28,11 @@ namespace SubarrayRepetitionsNumbers
             Console.WriteLine("Все массивы:" +
                               "\n------------------------------------------------------------------------------------------");
 
-            foreach (var items in numberArrayNumbers)
+            foreach (var numbersArray in numberArrayNumbers)
             {
-                foreach (var item in items)
+                foreach (var numberArray in numbersArray)
                 {
-                    Console.Write(item + "|");
+                    Console.Write(numberArray + "|");
                 }
 
                 Console.WriteLine();
