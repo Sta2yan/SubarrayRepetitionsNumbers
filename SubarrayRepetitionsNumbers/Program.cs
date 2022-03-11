@@ -8,7 +8,7 @@ namespace SubarrayRepetitionsNumbers
         static void Main(string[] args)
         {
             Random random = new Random();
-            int maximumNumber = 30;
+            int maximumNumber = 31;
             int minimumNumber = 1;
             int number;
             int[][] numberArrayNumbers = new int[30][];
